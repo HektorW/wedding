@@ -3,8 +3,6 @@
 
 </script>
 
-<h1>Westrup - Wallin</h1>
-
 <AnimatedTitle
   words={[
     'Välkommen',
@@ -14,3 +12,6 @@
     ['स्वा', 'ग', 'त', ' ', 'हे'],
   ]}
 />
+
+<img src="/Tree.png" alt="Tree" />
+
