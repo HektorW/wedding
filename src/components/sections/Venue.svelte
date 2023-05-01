@@ -5,7 +5,7 @@
 </script>
 
 <section>
-	<img src="/venue/dhilas_top_raw.jpg" />
+	<img class="top-view" src="/venue/dhilas_top_raw.jpg" />
 
 	<p class="intro">
 		The celebrations will take place at two adjacent venues, <strong>Casa Paço D'Ilhas</strong>
@@ -26,7 +26,7 @@
 		<Wave />
 	</div>
 
-	<p class="glimpse">To give you a glimpse of what's in store, check these places out below.</p>
+	<p class="glimpse">Scroll down for a taste of what awaits us.</p>
 	<!-- <p>To give you a preview of what's in store, check this out:</p> -->
 
 	<article>
@@ -72,12 +72,18 @@
 
 <style lang="scss">
 	section {
-		padding-top: 10rem;
+		padding-top: 25rem;
+	}
+
+	.top-view {
+		height: 45vh;
+		object-fit: cover;
+		width: 100%;
 	}
 
 	p {
 		margin-block: 2rem;
-		padding-inline: 1rem;
+		padding-inline: var(--content--padding--inline);
 	}
 
 	strong {
@@ -86,7 +92,7 @@
 	}
 
 	article {
-		margin-block: 10rem;
+		margin-block: var(--content--padding--block);
 
 		img {
 			height: 45vh;
@@ -97,7 +103,7 @@
 		h2,
 		p,
 		.links {
-			padding-inline: 1rem;
+			padding-inline: var(--content--padding--inline);
 		}
 
 		h2 {
@@ -109,6 +115,20 @@
 			display: flex;
 			gap: 0.5rem;
 			margin-top: 4rem;
+		}
+	}
+
+	@media screen and (min-width: 40em) {
+		.intro {
+			margin-top: 4rem;
+		}
+
+		.top-view {
+			height: 75vh;
+		}
+
+		article img {
+			height: 65vh;
 		}
 	}
 </style>

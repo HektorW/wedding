@@ -5,7 +5,8 @@
 
 <section>
 	<h2>
-		save in your calendar
+		save in your
+		<br />calendar
 		<Calendar />
 	</h2>
 
@@ -35,7 +36,7 @@
 <style lang="scss">
 	section {
 		padding-bottom: 7.5rem;
-		padding-inline: 1rem;
+		padding-inline: var(--content--padding--inline);
 	}
 
 	h2 {

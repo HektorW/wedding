@@ -13,7 +13,7 @@
 	function onIntroFinish() {
 		setTimeout(() => {
 			isShowingIntro = false
-		}, 1500)
+		}, 1000)
 	}
 </script>
 
@@ -23,7 +23,6 @@
 {#if isShowingIntro}
 	<Intro on:finish={onIntroFinish} />
 {:else}
-	<!-- <Confetti /> -->
 	<WestrupWallin />
 
 	<section class="intro">
@@ -84,7 +83,7 @@
 <style lang="scss">
 	.intro {
 		font-size: var(--heading--s);
-		padding-block: 10rem;
+		padding-block: var(--content--padding--block);
 		position: relative;
 		text-align: center;
 
@@ -92,7 +91,7 @@
 			left: -25vw;
 			max-width: none;
 			position: absolute;
-			top: 65vw;
+			top: 15rem;
 			transform: rotateY(180deg) rotate(10deg);
 			width: 70vw;
 			z-index: -1;
@@ -121,7 +120,7 @@
 	}
 
 	.outro {
-		padding-block: 10rem;
+		padding-block: var(--content--padding--block);
 		position: relative;
 
 		.tilde-hektor {
@@ -136,16 +135,39 @@
 
 		p {
 			margin-block: 2rem;
-			padding-inline: 1rem;
+			padding-inline: var(--content--padding--inline);
 		}
 
 		.palm {
-			bottom: -16vw;
+			bottom: -25vw;
 			height: 70vw;
+			object-fit: contain;
 			position: absolute;
 			right: -20%;
 			transform: rotateY(180deg) rotate(45deg);
 			z-index: -1;
+		}
+	}
+
+	@media screen and (min-width: 40em) {
+		.intro {
+			img {
+				left: -9rem;
+				width: 40vw;
+			}
+		}
+
+		.outro {
+			.tilde-hektor {
+				display: block;
+				margin-inline: auto;
+				max-width: 50rem;
+			}
+
+			.palm {
+				right: -10rem;
+				width: 26rem;
+			}
 		}
 	}
 </style>

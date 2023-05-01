@@ -3,9 +3,7 @@
 </script>
 
 <svelte:head>
-	<!-- <meta name="theme-color" content="hsl(201, 45%, 80%)" /> -->
 	<meta name="theme-color" content="hsl(36, 100%, 94%)" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
 </svelte:head>
 
 <!-- <Background /> -->
@@ -56,7 +54,7 @@
 		--root--color: var(--color--pbd--sand);
 		/* --gradient--color--1: var(--color--pbd--blue); */
 		/* --gradient--color--2: var(--color--pbd--sand); */
-		--gradient--color--1: var(--color--pbd--sand);
+		--gradient--color--1: var(--color--peach);
 		--gradient--color--2: var(--color--green);
 		--gradient--opacity: 0.75;
 		--gradient--stop--1: 20%;
@@ -68,11 +66,20 @@
 		--grid--gutter: 2rem;
 		--grid--padding--block: 3rem;
 		--grid--padding--inline: 3rem;
+
+		/* Content */
+		--content--padding--block: 10rem;
+		--content--padding--inline: 1rem;
 	}
 
 	@media screen and (min-width: 40em) {
 		:root {
-			/* --heading--l: var(--heading--l--desktop); */
+			--heading--m: 4rem;
+			--heading--s: 2.5rem;
+			--body--m: 1.25rem;
+
+			--content--padding--block: 15rem;
+			--content--padding--inline: calc((100vw - 38rem) / 2);
 		}
 	}
 
@@ -101,14 +108,6 @@
 	:global(body) {
 		font-size: var(--body--m);
 		margin: 0;
-
-		/* background: radial-gradient(
-			circle at left 10% top 10%,
-			var(--gradient--color--1) var(--gradient--stop--1),
-			var(--gradient--color--2) var(--gradient--stop--2)
-		); */
-		/* background-size: 100vw 100vh; */
-		/* background-attachment: fixed; */
 	}
 
 	:global(h1),
