@@ -1,19 +1,133 @@
-<slot></slot>
+<script>
+	import Background from '../components/Background.svelte'
+</script>
+
+<svelte:head>
+	<!-- <meta name="theme-color" content="hsl(201, 45%, 80%)" /> -->
+	<meta name="theme-color" content="hsl(36, 100%, 94%)" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+</svelte:head>
+
+<!-- <Background /> -->
+
+<main>
+	<slot />
+</main>
 
 <style>
-  :root {
-    --ease--in-out--back: cubic-bezier(0.68, -0.55, 0.27, 1.55);
-    
-    --ease-out--cubic: cubic-bezier(0.22, 0.61, 0.36, 1);
+	:root {
+		--ease--in-out--back: cubic-bezier(0.68, -0.55, 0.27, 1.55);
+		--ease-out--cubic: cubic-bezier(0.22, 0.61, 0.36, 1);
+		--ease--in-out--cubic: cubic-bezier(0.65, 0.05, 0.36, 1);
 
-    --color--bg: #FFEAA2;
-    --color--text: #000;
-  }
+		/* Typography */
+		--heading--l: 10vh;
+		--heading--m: 2.5rem;
+		--heading--s: 1.75rem;
 
-  :global(html) {
-    background-color: var(--color--bg);
-    color: var(--color--text);
-    font-family: 'Open Sans', sans-serif;
-    overflow-x: hidden;
-  }
+		/* --heading--l--desktop: 5rem; */
+
+		--body--m: 1.125rem;
+
+		/* Colors */
+		--color--green: hsl(134, 100%, 87%);
+		--color--peach: hsl(358, 97%, 85%);
+		--color--a: hsl(34, 100%, 79%);
+		--color--b: #84fff8;
+		--color--c: var(--color--green);
+		--color--d: var(--color--peach);
+		--color--e: #bde9ff;
+
+		--color--pbd--blue: hsl(201, 45%, 80%);
+		--color--pbd--peach: hsl(21, 100%, 81%);
+		--color--pbd--sand: hsl(36, 100%, 94%);
+
+		/* --color--bg: hsl(0, 0%, 100%); */
+		--color--bg: var(--color--pbd--sand);
+		/* --color--bg: var(--gradient--color--2); */
+		--color--text: hsl(0, 0%, 26%);
+		--color--text--strong: hsl(0, 0%, 13%);
+
+		/* Layers */
+		--layer--background: -1;
+		--layer--content: 0;
+
+		/* Background */
+		--root--color: var(--color--pbd--sand);
+		/* --gradient--color--1: var(--color--pbd--blue); */
+		/* --gradient--color--2: var(--color--pbd--sand); */
+		--gradient--color--1: var(--color--pbd--sand);
+		--gradient--color--2: var(--color--green);
+		--gradient--opacity: 0.75;
+		--gradient--stop--1: 20%;
+		--gradient--stop--2: 80%;
+		--texture--opacity: 0.25;
+
+		/* Grid */
+		--grid--columns: 8;
+		--grid--gutter: 2rem;
+		--grid--padding--block: 3rem;
+		--grid--padding--inline: 3rem;
+	}
+
+	@media screen and (min-width: 40em) {
+		:root {
+			/* --heading--l: var(--heading--l--desktop); */
+		}
+	}
+
+	@font-face {
+		font-family: 'MaisonNeue';
+		src: url(/font/MaisonNeueWEB-Book.woff2);
+	}
+
+	:global(html) {
+		background-color: var(--color--bg);
+		box-sizing: border-box;
+		color: var(--color--text);
+		font-family: 'MaisonNeue', 'Open Sans', sans-serif;
+		-webkit-font-smoothing: antialiased;
+		letter-spacing: -0.01em;
+		line-height: 1.5;
+		overflow-x: hidden;
+	}
+
+	:global(*),
+	:global(*::after),
+	:global(*::before) {
+		box-sizing: inherit;
+	}
+
+	:global(body) {
+		font-size: var(--body--m);
+		margin: 0;
+
+		/* background: radial-gradient(
+			circle at left 10% top 10%,
+			var(--gradient--color--1) var(--gradient--stop--1),
+			var(--gradient--color--2) var(--gradient--stop--2)
+		); */
+		/* background-size: 100vw 100vh; */
+		/* background-attachment: fixed; */
+	}
+
+	:global(h1),
+	:global(h2),
+	:global(h3),
+	:global(h4) {
+		font-weight: 400;
+		margin: 0;
+	}
+
+	:global(img) {
+		max-width: 100%;
+	}
+
+	:global(a) {
+		color: inherit;
+	}
+
+	main {
+		overflow-x: hidden;
+	}
 </style>

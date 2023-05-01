@@ -1,38 +1,38 @@
 {
-  "folders": [
-    {
-      "name": "Wedding",
-      "path": "."
-    }
-  ],
+	"folders": [
+		{
+			"name": "Wedding",
+			"path": "."
+		}
+	],
 
-  "settings": {
-    "files.exclude": {
-      "**/.git": true,
-      "**/.svn": true,
-      "**/.hg": true,
-      "**/CVS": true,
-      "**/.DS_Store": true,
-      "**/Thumbs.db": true,
-      "node_modules": true,
-    },
+	"settings": {
+		"files.exclude": {
+			"**/.git": true,
+			"**/.svn": true,
+			"**/.hg": true,
+			"**/CVS": true,
+			"**/.DS_Store": true,
+			"**/Thumbs.db": true,
+			"node_modules": true
+		},
 
-    "editor.codeActionsOnSave": {
-      "source.fixAll.eslint": true
-    },
-  
-    "eslint.validate": [
-      "typescript",
-      "typescriptreact",
-    ],
-  
-    "editor.defaultFormatter": "esbenp.prettier-vscode",
-    "prettier.semi": true,
-    "prettier.singleQuote": true,
-    "prettier.printWidth": 100,
-    "prettier.useEditorConfig": false,
-    "prettier.endOfLine": "lf",
-  
-    "typescript.tsdk": "node_modules/typescript/lib",
-  }
+		"editor.codeActionsOnSave": {
+			"source.fixAll.eslint": true
+		},
+
+		"editor.formatOnSave": true,
+
+		"eslint.validate": ["typescript", "typescriptreact"],
+
+		"editor.defaultFormatter": "esbenp.prettier-vscode",
+		"prettier.semi": true,
+		"prettier.singleQuote": true,
+		"prettier.printWidth": 100,
+		"prettier.useEditorConfig": false,
+		"prettier.endOfLine": "lf",
+
+		"typescript.preferences.importModuleSpecifier": "relative",
+		"typescript.tsdk": "node_modules/typescript/lib"
+	}
 }
