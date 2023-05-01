@@ -3,7 +3,7 @@
 </script>
 
 <section>
-	<img src="/Tree.png" />
+	<img src="/Tree.webp" srcset="/Tree.webp, /Treex2.webp 2x" />
 
 	<p>We'll be seeing each other in:</p>
 

@@ -26,7 +26,7 @@
 	<WestrupWallin />
 
 	<section class="intro">
-		<img src="/leafs.png" />
+		<img src="/leafs.webp" />
 
 		<p class="calendar">
 			<Calendar />
@@ -74,7 +74,7 @@
 
 		<p>We can't wait to share this special occasion with you!</p>
 
-		<img class="palm" src="/palm.png" />
+		<img class="palm" src="/palm.webp" />
 	</section>
 
 	<CalendarSection />

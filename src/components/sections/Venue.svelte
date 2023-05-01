@@ -5,7 +5,7 @@
 </script>
 
 <section>
-	<img class="top-view" src="/venue/dhilas_top_raw.jpg" />
+	<img class="top-view" src="/venue/dhilas_top.jpg" />
 
 	<p class="intro">
 		The celebrations will take place at two adjacent venues, <strong>Casa Paço D'Ilhas</strong>
@@ -30,7 +30,7 @@
 	<!-- <p>To give you a preview of what's in store, check this out:</p> -->
 
 	<article>
-		<img src="/venue/dhilas_raw.jpg" alt="Alma" />
+		<img src="/venue/dhilas.jpg" alt="Alma" />
 		<h2>casa paço d'ilhas</h2>
 
 		<p>Named after its location in Paço De Ilhas, a small rural village.</p>
@@ -51,7 +51,7 @@
 	</article>
 
 	<article>
-		<img src="/venue/alma_raw.jpg" alt="Alma" />
+		<img src="/venue/alma.jpg" alt="Alma" />
 		<h2>alma do paço</h2>
 
 		<p>The Soul of the Palace.</p>
