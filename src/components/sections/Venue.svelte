@@ -16,17 +16,16 @@
 		They both offer stunning views of the ocean and coastline, and you'll be able to enjoy both
 		spaces throughout the wedding festivities.
 	</p> -->
+	<div style:text-align="center">
+		<Wave />
+	</div>
 
 	<p>
 		We'll be doing everything at the venues, including our activities, eating, dancing, hanging out,
 		and even having the ceremony.
 	</p>
 
-	<div style:text-align="center">
-		<Wave />
-	</div>
-
-	<p class="glimpse">Scroll down for a taste of what awaits us.</p>
+	<!-- <p class="glimpse">Scroll down for a taste of what awaits us.</p> -->
 	<!-- <p>To give you a preview of what's in store, check this out:</p> -->
 
 	<article>
@@ -84,6 +83,10 @@
 	p {
 		margin-block: 2rem;
 		padding-inline: var(--content--padding--inline);
+	}
+
+	.intro {
+		margin-top: var(--content--padding--block);
 	}
 
 	strong {

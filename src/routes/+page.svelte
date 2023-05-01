@@ -7,6 +7,7 @@
 	import Stars from '../components/icons/Stars.svelte'
 	import RisingSun from '../components/icons/RisingSun.svelte'
 	import CalendarSection from '../components/sections/Calendar.svelte'
+	import Family from '../components/icons/Family.svelte'
 
 	let isShowingIntro = true
 
@@ -43,10 +44,14 @@
 
 	<Venue />
 
+	<div style:text-align="center">
+		<Family />
+	</div>
+
 	<section class="outro">
 		<img class="tilde-hektor" src="/us/tilde_hektor.jpg" />
 
-		<p>We're so excited to celebrate our wedding with you all!</p>
+		<p>We're so excited to celebrate our wedding with you all (and our little toddler 😮)!</p>
 
 		<div class="divider">
 			<RisingSun />

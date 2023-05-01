@@ -1,12 +1,6 @@
-<script>
-	import Background from '../components/Background.svelte'
-</script>
-
 <svelte:head>
 	<meta name="theme-color" content="hsl(36, 100%, 94%)" />
 </svelte:head>
-
-<!-- <Background /> -->
 
 <main>
 	<slot />
