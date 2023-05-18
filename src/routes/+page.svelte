@@ -27,6 +27,7 @@
 
 <link rel="preload" as="image" href="/us/hektor.jpg" />
 <link rel="preload" as="image" href="/us/tilde.jpg" />
+<link rel="preload" as="image" href="/us/tilde_hektor_looking_at.jpg" />
 
 {#if isRenderingIntro}
 	<div class="welcome-intro" class:is-active={isShowingIntro}>

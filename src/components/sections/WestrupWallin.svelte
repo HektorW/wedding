@@ -27,7 +27,7 @@
 	section {
 		--gap: 1rem;
 		--appear-delay: 0.15s;
-		--appear-duration: 1.25s;
+		--appear-duration: 1.5s;
 		--image-border-radius: 40px;
 		--base-font-size: 1vw;
 
