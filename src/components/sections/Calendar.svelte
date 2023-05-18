@@ -14,7 +14,7 @@
 		<ExternalLink
 			class="fade-in"
 			data-delay="0.2"
-			href="https://calendar.google.com/calendar/render?action=TEMPLATE&dates=20240701T1200%2F20240703T1200&details=https%3A%2F%2Fwestrup-wallin.vercel.app&location=Alma%20do%20Pa%C3%A7o%2C%20Travessa%20das%20Ruinas%2C%202640-825%20Pa%C3%A7%20-D%27Ilhas%2C%20Portugal&text=Westrup-Wallin%20Wedding"
+			href="https://calendar.google.com/calendar/render?action=TEMPLATE&dates=20240701T120000/20240703T120000&details=https%3A%2F%2Fwestrup-wallin.vercel.app&location=Alma%20do%20Pa%C3%A7o%2C%20Travessa%20das%20Ruinas%2C%202640-825%20Pa%C3%A7%20-D%27Ilhas%2C%20Portugal&text=Westrup-Wallin%20Wedding"
 		>
 			Google Calendar
 		</ExternalLink>
