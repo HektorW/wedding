@@ -15,6 +15,7 @@
 		padding: 0.5em 1em;
 		position: relative;
 		text-decoration: none;
+		transition: box-shadow 0.1s, transform 0.1s;
 
 		&::after {
 			background: currentColor;
@@ -34,6 +35,11 @@
 			&::after {
 				transform: translate(50%, -50%) rotate(45deg);
 			}
+		}
+
+		&:active {
+			box-shadow: 0 0 0 0 #fff;
+			transform: translate(2px, 2px);
 		}
 	}
 </style>

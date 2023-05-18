@@ -12,6 +12,10 @@
 		--ease-out--cubic: cubic-bezier(0.22, 0.61, 0.36, 1);
 		--ease--in-out--cubic: cubic-bezier(0.65, 0.05, 0.36, 1);
 
+		--ease-in-sine: cubic-bezier(0.47, 0, 0.75, 0.72);
+		--ease-in-quad: cubic-bezier(0.55, 0.09, 0.68, 0.53);
+		--ease-in-cube: cubic-bezier(0.55, 0.06, 0.68, 0.19);
+
 		/* Typography */
 		--heading--l: 10vh;
 		--heading--m: 2.5rem;
@@ -64,6 +68,7 @@
 		/* Content */
 		--content--padding--block: 10rem;
 		--content--padding--inline: 1rem;
+		--content--padding: 1rem;
 	}
 
 	@media screen and (min-width: 40em) {
@@ -91,6 +96,14 @@
 		letter-spacing: -0.01em;
 		line-height: 1.5;
 		overflow-x: hidden;
+
+		/* &.gradient {
+			background: radial-gradient(
+				circle at left 10% top 10%,
+				var(--color--bg) var(--gradient--stop--1),
+				var(--gradient--color--2) var(--gradient--stop--2)
+			);
+		} */
 	}
 
 	:global(*),

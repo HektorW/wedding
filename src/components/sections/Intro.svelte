@@ -11,6 +11,16 @@
 
 	onMount(() => {
 		isMounted = true
+
+		// document.scrollingElement!.scrollTop = 0
+
+		// document.body.style.height = '100%'
+		// document.body.style.overflow = 'hidden'
+
+		return () => {
+			// document.body.style.height = ''
+			// document.body.style.overflow = ''
+		}
 	})
 
 	function onWordsFinish() {
@@ -22,7 +32,7 @@
 </script>
 
 <section class:isFinished on:transitionend={onTransitionEnd}>
-	<div class="gradients" class:isMounted>
+	<div class="gradients fade-in" class:isMounted>
 		<MovingGradientBlob color="var(--color--pbd--peach)" />
 		<MovingGradientBlob color="var(--color--pbd--blue)" />
 		<MovingGradientBlob color="var(--color--green)" />
@@ -30,7 +40,7 @@
 
 	<h1>
 		<AnimatedWords
-			wordDurationMs={2000}
+			wordDurationMs={1500}
 			words={[
 				'välkommen',
 				'welcome',
@@ -50,6 +60,8 @@
 		align-items: center;
 		display: flex;
 		height: 90vh;
+		inset: 0 0 auto 0;
+		position: fixed;
 		transition: opacity 0.25s ease-out;
 
 		&.isFinished {
