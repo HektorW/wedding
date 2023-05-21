@@ -75,7 +75,11 @@
 	</div>
 
 	<section class="outro">
-		<img class="tilde-hektor fade-in" src="/us/tilde_hektor_apple.jpg" />
+		<img
+			class="tilde-hektor fade-in"
+			src="/us/tilde_hektor_apple.jpg"
+			alt="Tilde and Hektor smiling"
+		/>
 
 		<p class="fade-in" data-delay="0.1">
 			We're so excited to celebrate our wedding with all of you (and together with our little
@@ -110,7 +114,8 @@
 
 		<img
 			class="palm fade-in"
-			data-delay="0.8"
+			alt="Palm tree"
+			data-delay="0.4"
 			data-start-transform="translateY(15px) rotateY(180deg) rotate(45deg)"
 			src="/palm.webp"
 		/>

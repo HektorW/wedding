@@ -9,7 +9,7 @@
 		class="fade-in_"
 		data-threshold="0"
 		src="/us/tilde_hektor_looking_at.jpg"
-		alt="Tilde smiling"
+		alt="Tilde and Hektor looking at each other"
 	/>
 
 	<div class="name fade-in_">
