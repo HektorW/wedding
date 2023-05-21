@@ -37,9 +37,20 @@
 
 {#if !isShowingIntro}
 	<div class="top-background fade-in">
-		<MovingGradientBlob color="var(--color--pbd--peach)" />
-		<MovingGradientBlob color="var(--color--green)" />
-		<MovingGradientBlob color="var(--color--pbd--blue)" />
+		<MovingGradientBlob targetYMax={0.5} targetYStart={0.25} color="var(--color--pbd--peach)" />
+
+		<MovingGradientBlob targetYMax={0.5} targetYStart={0.5} color="var(--color--green)" />
+
+		<MovingGradientBlob
+			targetYMin={-0.15}
+			targetYMax={0.5}
+			targetYStart={-0.25}
+			targetXMin={-0.25}
+			targetXMax={1.25}
+			gradientStop2="70%"
+			moveSpeed={0.5}
+			color="var(--color--pbd--blue)"
+		/>
 	</div>
 
 	<FadeInOnAppear />
@@ -122,6 +133,35 @@
 	</section>
 
 	<CalendarSection />
+
+	<div class="bottom-background fade-in">
+		<MovingGradientBlob
+			targetYMin={0.75}
+			targetYMax={1}
+			gradientStop2="50%"
+			color="var(--color--pbd--blue)"
+		/>
+
+		<MovingGradientBlob
+			targetYMin={0.75}
+			targetYMax={1}
+			targetXMin={0.25}
+			targetXMax={0.75}
+			gradientStop2="50%"
+			color="var(--color--pbd--peach)"
+		/>
+
+		<MovingGradientBlob
+			targetYMin={1}
+			targetYMax={1.25}
+			targetYStart={1.3}
+			targetXMin={-0.25}
+			targetXMax={1.25}
+			gradientStop2="50%"
+			repositionDelayMs={3000}
+			color="var(--color--green)"
+		/>
+	</div>
 {/if}
 
 <style lang="scss">
@@ -139,6 +179,14 @@
 		position: absolute;
 		width: 100%;
 		z-index: -1;
+	}
+
+	.bottom-background {
+		height: 200vh;
+		position: absolute;
+		width: 100%;
+		bottom: 0;
+		z-index: -2;
 	}
 
 	.intro {

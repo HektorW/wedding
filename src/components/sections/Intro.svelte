@@ -33,9 +33,36 @@
 
 <section class:isFinished on:transitionend={onTransitionEnd}>
 	<div class="gradients fade-in" class:isMounted>
-		<MovingGradientBlob color="var(--color--pbd--peach)" />
-		<MovingGradientBlob color="var(--color--pbd--blue)" />
-		<MovingGradientBlob color="var(--color--green)" />
+		<MovingGradientBlob
+			moveSpeed={3}
+			targetXStart={-1.5}
+			targetXMax={1}
+			targetXMin={0.5}
+			targetYStart={0}
+			targetYMax={0.25}
+			targetYMin={-0.1}
+			gradientStop2="80%"
+			color="var(--color--pbd--peach)"
+		/>
+		<MovingGradientBlob
+			moveSpeed={3}
+			targetXStart={2.5}
+			targetXMax={0.5}
+			targetXMin={0}
+			targetYStart={0.25}
+			targetYMax={0.75}
+			targetYMin={0.5}
+			gradientStop2="80%"
+			color="var(--color--pbd--blue)"
+		/>
+		<MovingGradientBlob
+			moveSpeed={0.5}
+			targetYStart={1}
+			targetYMin={1}
+			targetYMax={1.25}
+			gradientStop2="80%"
+			color="var(--color--green)"
+		/>
 	</div>
 
 	<h1>

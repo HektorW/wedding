@@ -4,18 +4,43 @@
 	export let color: string = ''
 	export let gradientStop1 = 'var(--gradient--stop--1)'
 	export let gradientStop2 = 'var(--gradient--stop--2)'
+	export let targetYMin = 0
+	export let targetYMax = 1
+	export let targetYStart = 1.3
+	export let targetXMin = 0
+	export let targetXMax = 1
+	export let targetXStart = 0.8
+	export let repositionDelayMs = 2000
+	export let moveSpeed = 2
 
 	let gradientEl: HTMLDivElement
 
-	let targetX = typeof window === 'undefined' ? 0 : window.innerWidth * 0.8
-	let targetY = typeof window === 'undefined' ? 0 : window.innerHeight * 1.3
+	let targetX = 0 //typeof window === 'undefined' ? 0 : window.innerWidth * 0.8
+	let targetY = 0 //typeof window === 'undefined' ? 0 : window.innerHeight * 1.3
 
 	let gradientX = targetX
 	let gradientY = targetY
 
 	onMount(() => {
+		let isInViewport = false
+
+		new IntersectionObserver(
+			([entry]) => {
+				isInViewport = entry.isIntersecting
+			},
+			{
+				rootMargin: '0px',
+				threshold: 0
+			}
+		).observe(gradientEl)
+
+		gradientX = targetX = gradientEl.clientWidth * targetXStart
+		gradientY = targetY = gradientEl.clientHeight * targetYStart
+
 		let rafId = setTimeout(function update() {
 			rafId = requestAnimationFrame(update)
+
+			if (!isInViewport) return
 
 			const dirX = targetX - gradientX
 			const dirY = targetY - gradientY
@@ -23,25 +48,28 @@
 			const normalizedDirX = dirLength === 0 ? 0 : dirX / dirLength
 			const normalizedDirY = dirLength === 0 ? 0 : dirY / dirLength
 
-			const moveSpeed = 2
-
 			gradientX += normalizedDirX * moveSpeed
 			gradientY += normalizedDirY * moveSpeed
 
 			gradientEl.style.backgroundImage = `
 			  radial-gradient(
-			    circle at left ${gradientX}px top ${gradientY}px,
+			    circle at left ${gradientX.toFixed(2)}px top ${gradientY.toFixed(2)}px,
 			    ${color} ${gradientStop1},
 			    rgba(255, 255, 255, 0) ${gradientStop2}
 			  )
 			`
 		}, 100)
 
-		const newPositionIntervalDelayMs = 2000
 		const newPositionIntervalId = setInterval(() => {
-			targetX = window.innerWidth * Math.random()
-			targetY = window.innerHeight * Math.random()
-		}, newPositionIntervalDelayMs)
+			const { clientHeight, clientWidth } = gradientEl
+
+			targetX = lerp(targetXMin * clientWidth, targetXMax * clientWidth, Math.random())
+			targetY = lerp(targetYMin * clientHeight, targetYMax * clientHeight, Math.random())
+		}, repositionDelayMs)
+
+		function lerp(min: number, max: number, t: number) {
+			return min + (max - min) * t
+		}
 
 		return () => {
 			clearInterval(newPositionIntervalId)

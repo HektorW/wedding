@@ -1,10 +1,25 @@
 <script>
 	import { texts } from '../../stores/texts'
 	import ExternalLink from '../ExternalLink.svelte'
+	import MovingGradientBlob from '../MovingGradientBlob.svelte'
 	import Wave from '../icons/Wave.svelte'
 </script>
 
 <section>
+	<div class="top-gradient fade-in">
+		<MovingGradientBlob
+			targetXStart={1.5}
+			targetXMin={0.95}
+			targetXMax={1.5}
+			targetYStart={0.5}
+			targetYMin={0.3}
+			targetYMax={0.6}
+			gradientStop2="50%"
+			moveSpeed={0.5}
+			color="var(--color--pbd--peach)"
+		/>
+	</div>
+
 	<img class="top-view" alt="Arieal view of the venue" src="/venue/dhilas_top.jpg" />
 
 	<p class="intro fade-in" data-delay="0.1">
@@ -81,12 +96,44 @@
 			</ExternalLink>
 		</div>
 	</article>
+
+	<div class="bottom-gradient fade-in">
+		<MovingGradientBlob
+			targetXStart={-0.5}
+			targetXMin={-0.5}
+			targetXMax={0.05}
+			targetYStart={0.5}
+			targetYMin={0.3}
+			targetYMax={0.6}
+			gradientStop2="50%"
+			moveSpeed={0.5}
+			color="var(--color--pbd--blue)"
+		/>
+	</div>
 </section>
 
 <style lang="scss">
 	section {
 		position: relative;
 		z-index: 1;
+	}
+
+	.top-gradient {
+		position: absolute;
+		top: 10%;
+		left: 0;
+		width: 100%;
+		height: 200vh;
+		z-index: -1;
+	}
+
+	.bottom-gradient {
+		position: absolute;
+		bottom: 10%;
+		left: 0;
+		width: 100%;
+		height: 200vh;
+		z-index: -1;
 	}
 
 	.top-view {

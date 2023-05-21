@@ -120,6 +120,7 @@
 	:global(body) {
 		font-size: var(--body--m);
 		margin: 0;
+		position: relative;
 	}
 
 	:global(h1),
